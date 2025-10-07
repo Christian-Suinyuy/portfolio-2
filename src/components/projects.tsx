@@ -1,6 +1,16 @@
+import { useDispatch, useSelector } from "react-redux"
+import { fetchProjects } from "../state/firebaseSlice"
+import type { RootState, Appdispatch } from "../state/store"
+import { useState } from "react"
+
 function Portfolio(){
+    fetchProjects()
+    const projects = useSelector((state:RootState)=> state.projects)
+    const dispatch = useDispatch<Appdispatch>()
+    dispatch(fetchProjects())
     return (
         <section id="projects" className="flex flex-col justify-center text-center shadow-2xl p-3 items-center-safe gap-5">
+            <p></p>
             <div>
                 <h2 className="text-3xl font-semibold pb-3">Projects</h2>
                 <p>Explore some of my pieces</p>
@@ -22,7 +32,7 @@ function Portfolio(){
 function Card(){
     return (
         <div className="max-w-75 h-90 flex flex-col gap-3 border-1 border-gray-300">
-            <img src="/public/vite.svg" alt="" className="h-55 "/>
+            <img src="/public/computer.svg" alt="" className="h-55 "/>
             <div>
                 <p className="px-2">I design and develop services for customers specializing creating stylish, 
                     modern websites, web services.</p>

@@ -3,12 +3,19 @@ function About (){
         <section id="about" className="flex gap-15 justify-center p-20 bg-white shadow-2xl">
             <div className="image h-fit bg-purple-300 w-250 lg:w-4/5 rounded">
                 <img src="/public/saple.png" alt="" />
-                <div className="flex gap-4 shadow-2xl p-3 justify-center bg-white ">
+                <div className="flex gap-4 shadow-2xl p-3 justify-center items-center bg-white ">
+                       <a href="https://www.facebook.com/christian.bcs.521749/" target="blank"> 
                         <img src="/public/fb.svg" className="bg-purple-500 h-10 rounded p-2 w-10" alt="" />
-                        <img src="/public/Social-2.svg" className="h-10" alt="" />
-                        <img src="/public/Social-3.svg" className="h-10" alt="" />
-                        <img src="/public/ig.svg" className="h-10" alt="" />
-                        <img src="/public/linkedin.svg" className="h-10" alt="" />
+                       </a>
+                       <a href="" target="blank"> 
+                            <img src="/public/whatsapp.svg" className="h-10" alt="" />
+                       </a>
+                       <a href="https://github.com/Christian-Suinyuy/" target="blank">
+                            <img src="/public/Social-3.svg" className="h-10" alt="" />
+                        </a>
+                       <a href="https://www.linkedin.com/in/christian-suinyuy-6679b2327" target="blank">
+                            <img src="/public/linkedin.svg" className="h-9" alt="" />
+                        </a>
                     </div>
             </div>
 

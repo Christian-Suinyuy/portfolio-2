@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-
+import projectReducer from "./firebaseSlice"
 export const store = configureStore({
     reducer: {
-
+        projects:projectReducer
     }
 })
 
-export type RootState = typeof store.getState
-export type dispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>
+export type Appdispatch = typeof store.dispatch
