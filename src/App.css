@@ -1,0 +1,16 @@
+p{
+    color:#556070;
+}
+
+a {
+    transition: all .5s ease-in-out;
+}
+
+a:hover {
+    scale: 1.2;
+    text-decoration: underline;
+    color: #FFDFA8;
+}
+html {
+    scroll-behavior: smooth;
+}
