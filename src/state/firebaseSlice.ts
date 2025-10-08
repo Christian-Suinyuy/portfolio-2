@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, type PayloadAction, type PayloadActionCreator } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import { db } from "../firebase/sdk";
 import { collection, query, getDocs } from "firebase/firestore";
 
@@ -20,8 +20,7 @@ const projectSlice = createSlice({
 
     },
     extraReducers: (builder)=> {
-        builder.addCase(fetchProjects.fulfilled, (state, action)=>{
-            console.log(action.payload)
+        builder.addCase(fetchProjects.fulfilled, (_, action)=>{
                 return action.payload
         }).addCase(fetchProjects.pending, ()=>{
             console.log("fetching ...")
