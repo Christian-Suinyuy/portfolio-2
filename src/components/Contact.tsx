@@ -10,15 +10,15 @@ function Contact(){
 
     emailjs
       .sendForm(
-        'service_n1udg9h',
-        'template_z3lzet8',
+        import.meta.env.VITE_Email_Service,
+        import.meta.env.VITE_Email_Template,
         form.current,
-        'IpbpvYAPgPg1vPr2T'
+        import.meta.env.VITE_Emailjs_key
       )
       .then(
         result => {
           alert('Email sent: '+ result.text);
-          form.current?.reset
+          form.current?.reset()
         },
         error => {
           alert('Email error: '+ error.text);
