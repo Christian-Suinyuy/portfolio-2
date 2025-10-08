@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, type PayloadAction, type PayloadActionCr
 import { db } from "../firebase/sdk";
 import { collection, query, getDocs } from "firebase/firestore";
 
-interface projects{
+export interface projects{
     title: string,
     description: string,
     github: string,
@@ -11,21 +11,20 @@ interface projects{
     id:string,
 }
 
-const initialState: projects[] = []
+const initialState:any =  []
 
 const projectSlice = createSlice({
-    name:"projectss",
+    name:"projects",
     initialState,
     reducers:{
 
     },
     extraReducers: (builder)=> {
         builder.addCase(fetchProjects.fulfilled, (state, action)=>{
-            action.payload.forEach((doc:any)=>{
-                state = [...state, {...doc.data(), id:doc.id}]
-            })
-        }).addCase(fetchProjects.pending, (state)=>{
-            console.log(state)
+            console.log(action.payload)
+                return action.payload
+        }).addCase(fetchProjects.pending, ()=>{
+            console.log("fetching ...")
         })
     }  
 })
@@ -36,7 +35,8 @@ export const fetchProjects = createAsyncThunk(
         const projectsCollection = collection(db, "projects")
         const q = query(projectsCollection); // You can add filters here!
         const querySnapshot = await getDocs(q);
-        return querySnapshot;
+        // console.log(querySnapshot.docs)
+        return querySnapshot.docs.map(doc=>({id: doc.id, ...doc.data()}))
     }
 )
 

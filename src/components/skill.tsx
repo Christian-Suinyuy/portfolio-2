@@ -1,6 +1,6 @@
 function Skills(){
     return (
-        <section id="services" className="grid grid-cols-2 gap-4 items-center-safe justify-center">
+        <section id="services" className="grid sm:grid-cols-2 gap-6 items-center-safe justify-center">
             <div id="left">
                 <h2 className="font-semibold text-2xl mb-3">What do i do ?</h2>
                 <p>I design top web UI (user interface) striving to offer the best UX (user experiences)

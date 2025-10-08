@@ -1,22 +1,22 @@
 function About (){
     return(
-        <section id="about" className="flex gap-15 justify-center p-20 bg-white shadow-2xl">
-            <div className="image h-fit bg-purple-300 w-250 lg:w-4/5 rounded">
-                <img src="/public/saple.png" alt="" />
-                <div className="flex gap-4 shadow-2xl p-3 justify-center items-center bg-white ">
+        <section id="about" className="sm:flex gap-15 relative justify-center pb-24 sm:p-5 bg-white shadow-2xl">
+            <div className="image h-fit bg-purple-300 w-450 lg:w-4/5 rounded">
+                <img src="/public/saple.png" className="hidden sm:flex" alt="" />
+                <div className="flex gap-4 max-w-dvw absolute bottom-0 sm:static shadow-2xl p-3 justify-center items-center bg-white ">
                        <a href="https://www.facebook.com/christian.bcs.521749/" target="blank"> 
-                        <img src="/public/fb.svg" className="bg-purple-500 h-10 rounded p-2 w-10" alt="" />
+                        <img src="/fb.svg" className="bg-purple-500 h-10 rounded p-2 w-10" alt="" />
                        </a>
-                       <a href="" target="blank"> 
-                            <img src="/public/whatsapp.svg" className="h-10" alt="" />
+                       <a href="https://wa.me/651098669" target="blank"> 
+                            <img src="/whatsapp.svg" className="h-10" alt="" />
                        </a>
                        <a href="https://github.com/Christian-Suinyuy/" target="blank">
-                            <img src="/public/Social-3.svg" className="h-10" alt="" />
+                            <img src="/github.svg" className="h-10" alt="" />
                         </a>
                        <a href="https://www.linkedin.com/in/christian-suinyuy-6679b2327" target="blank">
-                            <img src="/public/linkedin.svg" className="h-9" alt="" />
+                            <img src="/linkedin.svg" className="h-9" alt="" />
                         </a>
-                    </div>
+                </div>
             </div>
 
              <div id="intro" className="gap-5 flex flex-col justify-center">

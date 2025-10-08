@@ -1,9 +1,12 @@
 function Hero(){
     return (
-        <section id="home" className="flex gap-5 justify-center">
+        <section id="home" className="sm:grid grid-cols-2 relative lg:gap-5 justify-center">
             <div id="left" className="flex flex-col gap-15">
                 <div id="intro" className="gap-5 flex flex-col text">
                     <h1 className="font-semibold text-6xl py-8"> Hello, i`m <br /> Banboye Christian</h1>
+                    <div className="image sm:hidden static w-full max-w-full lg:w-4/5 rounded">
+                        <img src="/public/sample2.png"  className="" alt="" />
+                    </div>
                     <p className="text-gray-900">I`m software developer based in Bamenda, Cameroon and i
                         strive to build immersive and beautifull web applications
                         through carefully crafted code and user-centric design.
@@ -21,7 +24,7 @@ function Hero(){
                         <span className="">Experience </span>
                     </div>
                     <div className="flex flex-1 rounded flex-col justify-center items-center p-2 -safe bg-purple-100">
-                        <span className="font-semibold text-3xl"> 10+</span>
+                        <span className="font-semibold text-3xl"> 5</span>
                         <span className="">Projects </span>
                     </div>
                     <div className="flex flex-1 rounded flex-col justify-center items-center p-2 -safe bg-purple-100">
@@ -31,7 +34,7 @@ function Hero(){
                 </div>
             </div>
 
-            <div className="image  w-250 lg:w-4/5 rounded">
+            <div className="image hidden sm:block max-w-full w-450 lg:w-4/5 rounded">
                 <img src="/public/sample2.png"  className="" alt="" />
             </div>
 

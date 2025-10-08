@@ -4,7 +4,7 @@ import pensile from "/public/User Interface/Pencil.svg";
 import device from "/public/Device/computer.svg";
 function WorkProcess (){
     return (
-        <section id="process" className="grid grid-cols-2 gap-4 py-10">
+        <section id="process" className="grid sm:grid-cols-2 gap-9 sm:gap-4 py-10">
             <div className="left flex flex-col justify-center">
                 <h2 className="pm-2 text-black  text-2xl pb-5 font-semibold"> Work Process</h2>
                 <p className="mb-3">
