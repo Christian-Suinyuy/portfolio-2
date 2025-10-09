@@ -5,7 +5,7 @@ function Hero(){
                 <div id="intro" className="gap-5 flex flex-col text">
                     <h1 className="font-semibold text-6xl py-8"> Hello, i`m <br /> Banboye Christian</h1>
                     <div className="image sm:hidden static w-full max-w-full lg:w-4/5 rounded">
-                        <img src="/public/sample2.png"  className="" alt="" />
+                        <img src="/sample2.png"  className="" alt="" />
                     </div>
                     <p className="text-gray-900">I`m software developer based in Bamenda, Cameroon and i
                         strive to build immersive and beautifull web applications
@@ -35,7 +35,7 @@ function Hero(){
             </div>
 
             <div className="image hidden sm:block max-w-full w-450 lg:w-4/5 rounded">
-                <img src="/public/sample2.png"  className="" alt="" />
+                <img src="/sample2.png"  className="" alt="" />
             </div>
 
         </section>

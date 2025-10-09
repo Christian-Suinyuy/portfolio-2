@@ -1,3 +1,4 @@
+import sample from "/blogimg.svg"
 function Blog(){
 
     return(
@@ -26,7 +27,7 @@ function Blog(){
 function Card(){
     return (
         <div className="max-w-60 h-84 flex flex-col gap-1 border-1 border-gray-300">
-            <img src="/public/blogimg.svg" alt="" className="w-full "/>
+            <img src={sample} alt="" className="w-full "/>
             <p>Mon Oct 06 2025</p>
             <h5  className=" mx-3">
                 I design and develop services for customers specializing creating stylish, 
