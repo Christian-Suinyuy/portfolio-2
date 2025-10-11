@@ -1,7 +1,3 @@
-import research from "/Education/vector.svg";
-import analitics from "/Business/Vector.svg";
-import pensile from "/User Interface/Pencil.svg";
-import device from "/Device/computer.svg";
 function WorkProcess (){
     return (
         <section id="process" className="grid sm:grid-cols-2 gap-9 sm:gap-4 py-10">
@@ -20,7 +16,7 @@ function WorkProcess (){
 
             <div className="right grid gap-3 grid-cols-2">
                 <div className=" bg-white flex flex-col gap-3 p-3 shadow-2xl">
-                    <img src={research} alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-500" />
+                    <img src="/education.svg" alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-500" />
                     <h4 className="font-semibold text-black text-xl">1. Research</h4>
                     <p>
                         Through competitor audits and user insights, i gather valuable data that shapes design direction and ensures the
@@ -29,7 +25,7 @@ function WorkProcess (){
                 </div>
 
                 <div className=" bg-white flex flex-col gap-3 p-3 shadow-2xl">
-                    <img src={analitics} alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
+                    <img src="/business.svg" alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
                     <h4 className="font-semibold text-black text-xl">2. Analyze</h4>
                     <p>
                         I begin identifying the project`s objective, audience, and key challenges. This helps define the scope and sets a
@@ -38,7 +34,7 @@ function WorkProcess (){
                 </div>
 
                 <div className=" bg-white flex flex-col gap-3 p-3 shadow-2xl">
-                    <img src={pensile} alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
+                    <img src="/Pencil.svg" alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
                     <h4 className="font-semibold text-black text-xl">3. Design</h4>
                     <p>
                         With focus on usability and aesthetics, i Translate ideas
@@ -48,7 +44,7 @@ function WorkProcess (){
                 </div>
 
                 <div className=" bg-white flex flex-col gap-3 p-3 shadow-2xl">
-                    <img src={device} alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
+                    <img src="/computer.svg" alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
                     <h4 className="font-semibold text-black text-xl">4. Launch</h4>
                     <p>
                         After rigorous testing and refinement, i deliver and deploy the
