@@ -35,7 +35,7 @@ function Card(details: ProjectType){
     return (
         <div className="max-w-75 h-95 flex flex-col gap-3 border-1 border-gray-300">
             {/* <img src="/public/computer.svg" alt="" className="h-35 "/> */}
-            <div className="bg-[url('/computer.svg')] bg-cover bg-center h-40">
+            <div className="bg-[url('/computer2.svg')] bg-cover bg-center h-40">
 
             </div>
             <div>
