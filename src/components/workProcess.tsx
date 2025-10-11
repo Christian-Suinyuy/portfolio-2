@@ -1,7 +1,7 @@
-import research from "/public/Education/vector.svg";
-import analitics from "/public/Business/Vector.svg";
-import pensile from "/public/User Interface/Pencil.svg";
-import device from "/public/Device/computer.svg";
+import research from "/Education/vector.svg";
+import analitics from "/Business/Vector.svg";
+import pensile from "/User Interface/Pencil.svg";
+import device from "/Device/computer.svg";
 function WorkProcess (){
     return (
         <section id="process" className="grid sm:grid-cols-2 gap-9 sm:gap-4 py-10">
