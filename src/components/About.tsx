@@ -31,8 +31,8 @@ function About (){
                         I believe great design is not just about how things look but how they work, and that mindset drives me to build solutions that are both elegant and impactful
                     </p>
                     <div className="flex gap-3">
-                        <a href=""><button className="text-white rounded bg-purple-500 p-3">My Projects</button></a>
-                        <a href=""><button className="text-black rounded border-1 border-purple-500 p-3">download CV</button></a>
+                        <a href="#projects"><button className="text-white rounded bg-purple-500 p-3">My Projects</button></a>
+                        <a href="#"><button className="text-black rounded border-1 border-purple-500 p-3">download CV</button></a>
                     </div>
                 </div>
         </section>

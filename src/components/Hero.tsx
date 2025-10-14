@@ -1,4 +1,8 @@
+import { useSelector } from "react-redux"
+import type { RootState } from "../state/store"
 function Hero(){
+    let projects = useSelector((state:RootState)=> state.projects)
+    console.log(projects.length)
     return (
         <section id="home" className="sm:grid grid-cols-2 relative lg:gap-5 justify-center">
             <div id="left" className="flex flex-col gap-15">
@@ -24,7 +28,9 @@ function Hero(){
                         <span className="">Experience </span>
                     </div>
                     <div className="flex flex-1 rounded flex-col justify-center items-center p-2 -safe bg-purple-100">
-                        <span className="font-semibold text-3xl"> 5</span>
+                        <span className="font-semibold text-3xl">
+                            {projects.length}
+                        </span>
                         <span className="">Projects </span>
                     </div>
                     <div className="flex flex-1 rounded flex-col justify-center items-center p-2 -safe bg-purple-100">
