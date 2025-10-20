@@ -19,7 +19,7 @@ function Header(){
                 <DropdownMenu />
                 <div onClick={()=>Dispatch(toggleTheme())} className="sm:hidden h-5">
                   {
-                   theme.theme ==="light"?  <img src="/public/darktheme.svg" className="h-full" /> : <img src="/public/lightheme.svg" className="h-full" />
+                   theme.theme ==="light"?  <img src="/darktheme.svg" className="h-full" /> : <img src="/lightheme.svg" className="h-full" />
 
                   }
                 </div>
@@ -37,7 +37,7 @@ function Header(){
 
             <div onClick={()=>Dispatch(toggleTheme())} className="hidden sm:flex h-5 items-center sm:fixed top-2 right-5">
                {
-                   theme.theme ==="light"?  <img src="/public/darktheme.svg" className="h-full" /> : <img src="/public/lightheme.svg" className="h-full" />
+                   theme.theme ==="light"?  <img src="/darktheme.svg" className="h-full" /> : <img src="/lightheme.svg" className="h-full" />
 
                   }
             </div>
