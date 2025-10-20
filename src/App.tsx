@@ -10,25 +10,28 @@ import Footer from './components/Footer'
 import Skills from './components/skill'
 import Blog from './components/Blog'
 import Projectidea from './components/projectIdea'
+import { useSelector } from 'react-redux'
+import {type  RootState } from './state/store'
 function App() {
+  const theme = useSelector((state:RootState)=> state.theme)
 
   return (
-    <>
+    <div className={`${theme.theme === "light" ? "lightTheme" : "darkTheme"}`}>
       <Header />
-    <section className='gap-40  mt-20 mx-5 md:mx-20 lg:mx-50 flex flex-col'>
+    <section className='gap-20 mx-5 md:px-20 lg:mx-50 flex flex-col'>
       <Hero />
       <About />
       <WorkProcess />
       <Portfolio />
     </section>
       <Projectidea />
-    <section className='gap-40 relative mt-20 mx-5 md:mx-20 lg:mx-50 flex flex-col'>
+    <section className='gap-20 relative mt-10 mx-5 md:mx-20 lg:mx-50 flex flex-col'>
       <Blog />
       <Skills />
       <Contact />
     </section>
       <Footer />
-    </>
+    </div>
   )
 }
 

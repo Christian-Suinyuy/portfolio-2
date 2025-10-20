@@ -1,6 +1,6 @@
 function WorkProcess (){
     return (
-        <section id="process" className="grid sm:grid-cols-2 gap-9 sm:gap-4 py-10">
+        <section id="process" className="flex flex-col gap-2 sm:gap-4">
             <div className="left flex flex-col justify-center">
                 <h2 className="pm-2 text-black  text-2xl pb-5 font-semibold"> Work Process</h2>
                 <p className="mb-3">
@@ -15,7 +15,7 @@ function WorkProcess (){
             </div>
 
             <div className="right grid gap-3 grid-cols-2">
-                <div className=" bg-white flex flex-col gap-3 p-3 shadow-2xl">
+                <div className="flex flex-col gap-3 p-3 shadow-2xl">
                     <img src="/education.svg" alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-500" />
                     <h4 className="font-semibold text-black text-xl">1. Research</h4>
                     <p>
@@ -24,7 +24,7 @@ function WorkProcess (){
                     </p>
                 </div>
 
-                <div className=" bg-white flex flex-col gap-3 p-3 shadow-2xl">
+                <div className="flex flex-col gap-3 p-3 shadow-2xl">
                     <img src="/business.svg" alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
                     <h4 className="font-semibold text-black text-xl">2. Analyze</h4>
                     <p>
@@ -33,7 +33,7 @@ function WorkProcess (){
                     </p>
                 </div>
 
-                <div className=" bg-white flex flex-col gap-3 p-3 shadow-2xl">
+                <div className="flex flex-col gap-3 p-3 shadow-2xl">
                     <img src="/Pencil.svg" alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
                     <h4 className="font-semibold text-black text-xl">3. Design</h4>
                     <p>
@@ -43,7 +43,7 @@ function WorkProcess (){
                     </p>
                 </div>
 
-                <div className=" bg-white flex flex-col gap-3 p-3 shadow-2xl">
+                <div className="flex flex-col gap-3 p-3 shadow-2xl">
                     <img src="/computer.svg" alt="" className="p-1 px-2 h-8 w-8 rounded bg-purple-200" />
                     <h4 className="font-semibold text-black text-xl">4. Launch</h4>
                     <p>

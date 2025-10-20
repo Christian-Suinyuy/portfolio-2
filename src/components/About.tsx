@@ -1,6 +1,6 @@
 function About (){
     return(
-        <section id="about" className="sm:flex gap-15 relative justify-center pb-24 sm:p-5 bg-white shadow-2xl">
+        <section id="about" className="sm:flex gap-15 relative justify-center pb-24 sm:p-5shadow-2xl">
             <div className="image h-fit bg-purple-300 w-450 lg:w-4/5 rounded">
                 <img src="/saple.png" className="hidden sm:flex" alt="" />
                 <div className="flex gap-4 max-w-dvw absolute bottom-0 sm:static shadow-2xl p-3 justify-center items-center bg-white ">

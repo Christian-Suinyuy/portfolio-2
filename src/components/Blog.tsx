@@ -10,7 +10,7 @@ function Blog(){
                 <p> View my recent activities </p>
             </div>
 
-            <div className="flex gap-4 items-center justify-center flex-wrap">
+            <div className="flex gap-4 items-center p-2 flex-wrap">
                 <Card />
                 <Card />
                 <Card />

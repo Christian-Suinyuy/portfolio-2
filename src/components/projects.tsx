@@ -21,7 +21,7 @@ function Portfolio(){
                 <p>Explore some of my pieces</p>
             </div >
 
-            <div className="flex flex-wrap gap-10 items-center-safe justify-center">
+            <div className="flex flex-wrap gap-10 items-center-safe">
                 {
                     projects?.map((project: ProjectType)=> <Card key={project.id} {...project}/>)
                 }

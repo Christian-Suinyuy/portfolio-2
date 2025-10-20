@@ -29,11 +29,11 @@ function Contact(){
     return(
 
         <section id="contact" className="pb-20 ">
-            <h2 className="text-center font-semibold text-2xl mb-3">Let`s Discause your Project</h2>
+            <h2 className="text-center font-semibold text-2xl mb-3">Let`s Discuss your Project</h2>
             <p className="text-center p-x-20">hi! i would really appriciate your feedback, you can contact me throght the following services</p>
-            <div className="grid sm:grid-cols-2 gap-15 shadow-2xl px-10 py-18">
+            <div className="grid sm:grid-cols-2 gap-15 shadow-2xl px-10 md:px-4 py-18">
                 <div className="flex flex-col gap-5">
-                    <div className="flex gap-5 bg-gray-200 p-4">
+                    <div className="flex gap-5 contact-stuff p-4">
                         <img src="/location.svg" className='w-8' alt="" />
                         <div>
                             <p>Address:</p>
@@ -41,15 +41,15 @@ function Contact(){
                         </div>
                         
                     </div>
-                    <div className="flex gap-5 bg-gray-200 p-4">
+                    <div className=" contact-stuff p-4">
+                        <div className='flex gap-5'>
                         <img src="/maile.svg" className='w-8' alt="" />
-                        <div>
                             <p>Email:</p>
-                            <address>Christiansuinyuy@gmail.com</address>
                         </div>
+                        <address className='px-4'>Christiansuinyuy@gmail.com</address>
                         
                     </div>
-                    <div className="flex gap-5 bg-gray-200 p-4">
+                    <div className="flex contact-stuff gap-5 p-4">
                         <img src="/whatsapp.svg" className='w-8' alt="" />
                         <div>
                             <p>Call me now:</p>
@@ -58,7 +58,7 @@ function Contact(){
                         
                     </div>
 
-                    <div className="flex gap-4 max-w-dvw absolute bottom-0 sm:static shadow-2xl p-3 justify-center items-center bg-white ">
+                    <div className="flex gap-4 max-w-dvw absolute bottom-0 sm:static shadow-2xl p-3 justify-center items-center contact-stuff">
                        <a href="https://www.facebook.com/christian.bcs.521749/" target="blank"> 
                         <img src="/fb.svg" className="bg-purple-500 h-10 rounded p-2 w-10" alt="" />
                        </a>
@@ -74,7 +74,7 @@ function Contact(){
                 </div>
                 </div>
                 <form action="#" ref={form} onSubmit={sendEmail} className="">
-                    <p className="pb-3">Email me here, about projects or ides you think i could improve on</p>
+                    <p className="pb-3">Email me here, about projects or ideas you think i could improve on</p>
                     <label htmlFor="name">
                         <p>Name*</p>
                         <input type="text" name='user_name' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />

@@ -1,15 +1,28 @@
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import type { RootState, AppDispatch } from '../state/store';
+import { toggleTheme } from '../state/ThemeSlice';
 
 function Header(){
+  const theme = useSelector((state:RootState)=> state.theme)
+  const Dispatch = useDispatch<AppDispatch>()
+  console.log(theme)
     return(
-        <section className="flex sticky z-10 top-0 bg-white pt-2 justify-between px-5 sm:px-10 md:px-30 lg:px-60">
+
+        <section className={`${theme.theme === "light" ? "bg-white" : "bg-slate-800"} flex sticky z-10 top-0 pt-2 justify-between px-5 sm:px-10 md:px-30 lg:px-60`}>
             <div id="me"className="flex gap-1">
                 <span className="rounded-4xl w-8 text-center text-white h-8 bg-purple-500"> B</span>
                 Banboye
             </div>
 
-            <div className='sm:hidden flex'>
+            <div className='sm:hidden flex items-center gap-2'>
                 <DropdownMenu />
+                <div onClick={()=>Dispatch(toggleTheme())} className="sm:hidden h-5">
+                  {
+                   theme.theme ==="light"?  <img src="/public/darktheme.svg" className="h-full" /> : <img src="/public/lightheme.svg" className="h-full" />
+
+                  }
+                </div>
             </div>
 
             <nav className="hidden sm:flex list-none gap-5">
@@ -21,6 +34,13 @@ function Header(){
                 <a href="#services"><li>Services</li></a>
                 <a href="#contact"><button className="p-1 rounded text-white px-5 bg-purple-500">Contact</button></a>
             </nav>
+
+            <div onClick={()=>Dispatch(toggleTheme())} className="hidden sm:flex h-5 items-center sm:fixed top-2 right-5">
+               {
+                   theme.theme ==="light"?  <img src="/public/darktheme.svg" className="h-full" /> : <img src="/public/lightheme.svg" className="h-full" />
+
+                  }
+            </div>
         </section>
     )
 }
