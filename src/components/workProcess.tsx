@@ -1,6 +1,6 @@
 function WorkProcess (){
     return (
-        <section id="process" className="grid sm:grid-cols-2 gap-9 sm:gap-4 py-10">
+        <section id="process" className="flex flex-col gap-2 sm:gap-4">
             <div className="left flex flex-col justify-center">
                 <h2 className="pm-2 text-black  text-2xl pb-5 font-semibold"> Work Process</h2>
                 <p className="mb-3">

@@ -4,12 +4,12 @@ function Hero(){
     let projects = useSelector((state:RootState)=> state.projects)
     console.log(projects.length)
     return (
-        <section id="home" className="sm:grid grid-cols-2 relative lg:gap-5 justify-center">
-            <div id="left" className="flex flex-col gap-15">
-                <div id="intro" className="gap-5 flex flex-col text">
-                    <h1 className="font-semibold text-6xl py-8"> Hello, i`m <br /> Banboye Christian</h1>
-                    <div className="image sm:hidden static w-full max-w-full lg:w-4/5 rounded">
-                        <img src="/sample2.png"  className="" alt="" />
+        <section id="home" className="sm:grid grid-cols-2 relative lg:gap- justify-center">
+            <div id="left" className="flex flex-col gap-10">
+                <div id="intro" className=" md:gap-5 gap-2 flex flex-col text">
+                    <h1 className="font-semibold text-6xl pt-8"> Hello, i`m <br /> Banboye Christian</h1>
+                    <div className="image sm:hidden flex justify-center rounded">
+                        {/* <img src="/me.png"  className="h-80 rounded" alt="" /> */}
                     </div>
                     <p className="text-gray-900">I`m software developer based in Bamenda, Cameroon and i
                         strive to build immersive and beautifull web applications
@@ -40,8 +40,8 @@ function Hero(){
                 </div>
             </div>
 
-            <div className="image hidden sm:block max-w-full w-450 lg:w-4/5 rounded">
-                <img src="/sample2.png"  className="" alt="" />
+            <div className="image hidden sm:flex sm:justify-around sm:items-center max-w-full w-450 lg:w-4/5 rounded">
+                <img src="/me.png"  className=" h-85" alt="" />
             </div>
 
         </section>

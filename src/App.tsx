@@ -15,14 +15,14 @@ function App() {
   return (
     <>
       <Header />
-    <section className='gap-40  mt-20 mx-5 md:mx-20 lg:mx-50 flex flex-col'>
+    <section className='gap-20 mx-5 md:mx-20 lg:mx-50 flex flex-col'>
       <Hero />
       <About />
       <WorkProcess />
       <Portfolio />
     </section>
       <Projectidea />
-    <section className='gap-40 relative mt-20 mx-5 md:mx-20 lg:mx-50 flex flex-col'>
+    <section className='gap-20 relative mt-10 mx-5 md:mx-20 lg:mx-50 flex flex-col'>
       <Blog />
       <Skills />
       <Contact />

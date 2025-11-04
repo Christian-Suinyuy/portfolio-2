@@ -29,9 +29,9 @@ function Contact(){
     return(
 
         <section id="contact" className="pb-20 ">
-            <h2 className="text-center font-semibold text-2xl mb-3">Let`s Discause your Project</h2>
+            <h2 className="text-center font-semibold text-2xl mb-3">Let`s Discuss your Project</h2>
             <p className="text-center p-x-20">hi! i would really appriciate your feedback, you can contact me throght the following services</p>
-            <div className="grid sm:grid-cols-2 gap-15 shadow-2xl px-10 py-18">
+            <div className="grid sm:grid-cols-2 gap-15 shadow-2xl px-10 md:px-4 py-18">
                 <div className="flex flex-col gap-5">
                     <div className="flex gap-5 bg-gray-200 p-4">
                         <img src="/location.svg" className='w-8' alt="" />
@@ -43,9 +43,9 @@ function Contact(){
                     </div>
                     <div className="flex gap-5 bg-gray-200 p-4">
                         <img src="/maile.svg" className='w-8' alt="" />
-                        <div>
+                        <div className='min-w-fit'>
                             <p>Email:</p>
-                            <address>Christiansuinyuy@gmail.com</address>
+                            <address className='max-w-full overflow-clip'>Christiansuinyuy@gmail.com</address>
                         </div>
                         
                     </div>
@@ -96,7 +96,7 @@ function Contact(){
                         <input type="text" name='message' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
                     </label>
 
-                    <button type="submit" className="bg-purple-500 hover:cursor-pointer active:scale-85 transition-all duration-100 ease-in-out rounded p-3 mt-10 flex gap-4">Submit <img src="/public/send.svg" alt="" /></button>
+                    <button type="submit" className="bg-purple-500 hover:cursor-pointer active:scale-85 transition-all duration-100 ease-in-out rounded p-3 mt-10 flex gap-4">Submit <img src="/send.svg" alt="" /></button>
                 </form>
             </div>
         </section>
