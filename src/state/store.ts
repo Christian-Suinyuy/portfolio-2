@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import projectReducer from "./firebaseSlice"
+import themeReducer from "./ThemeSlice"
 export const store = configureStore({
     reducer: {
-        projects:projectReducer
+        projects:projectReducer,
+        theme : themeReducer
     }
 })
 

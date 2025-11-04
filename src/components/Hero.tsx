@@ -6,10 +6,10 @@ function Hero(){
     return (
         <section id="home" className="sm:grid grid-cols-2 relative lg:gap- justify-center">
             <div id="left" className="flex flex-col gap-10">
-                <div id="intro" className=" md:gap-5 gap-2 flex flex-col text">
+                <div id="intro" className=" md:gap-5 flex flex-col text">
                     <h1 className="font-semibold text-6xl pt-8"> Hello, i`m <br /> Banboye Christian</h1>
                     <div className="image sm:hidden flex justify-center rounded">
-                        {/* <img src="/me.png"  className="h-80 rounded" alt="" /> */}
+                        <img src="/sample2.png"  className="h-80 rounded" alt="" />
                     </div>
                     <p className="text-gray-900">I`m software developer based in Bamenda, Cameroon and i
                         strive to build immersive and beautifull web applications
