@@ -1,15 +1,29 @@
 import { useSelector } from "react-redux"
 import type { RootState } from "../state/store"
+// import React from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useEffect, useState } from "react";
+
+
 function Hero(){
     let projects = useSelector((state:RootState)=> state.projects)
-    console.log(projects.length)
+    const [animationUrl, seturl] = useState('')
+        useEffect(()=>{
+            seturl("https://lottie.host/264df042-676b-4fd5-8456-29316283aa4e/HIIYtbst5l.lottie")
+        })
     return (
         <section id="home" className="sm:grid grid-cols-2 relative lg:gap- justify-center">
             <div id="left" className="flex flex-col gap-10">
                 <div id="intro" className=" md:gap-5 flex flex-col text">
                     <h1 className="font-semibold text-6xl pt-8"> Hello, i`m <br /> Banboye Christian</h1>
                     <div className="image sm:hidden flex justify-center rounded">
-                        <img src="/sample2.png"  className="h-80 rounded" alt="" />
+                        <div id="animation1">
+                            <DotLottieReact
+                            src={animationUrl}
+                            loop
+                            autoplay
+                            />
+                        </div>
                     </div>
                     <p className="text-gray-900">I`m software developer based in Bamenda, Cameroon and i
                         strive to build immersive and beautifull web applications
@@ -41,7 +55,14 @@ function Hero(){
             </div>
 
             <div className="image hidden sm:flex sm:justify-around sm:items-center max-w-full w-450 lg:w-4/5 rounded">
-                <img src="/me.png"  className=" h-85" alt="" />
+                        <div id="animation1" className="h-80">
+                            <DotLottieReact
+                            src={animationUrl}
+                            loop
+                            autoplay
+                            />
+                        </div>
+                {/* <img src="/me.png"  className=" h-85" alt="" /> */}
             </div>
 
         </section>

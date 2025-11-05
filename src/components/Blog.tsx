@@ -1,6 +1,7 @@
+import { useSelector } from "react-redux"
+import {type RootState } from "../state/store"
 import sample from "/blogimg.svg"
 function Blog(){
-
     return(
         <section id="blog" className=" flex flex-col gap-8 shadow-2xl py-10 items-center justify-center">
             <div className="text-center">
@@ -25,15 +26,18 @@ function Blog(){
 }
 
 function Card(){
+    const theme = useSelector((state:RootState)=> state.theme)
     return (
-        <div className="max-w-60 h-84 flex flex-col gap-1 border-1 border-gray-300">
-            <img src={sample} alt="" className="w-full "/>
-            <p>Mon Oct 06 2025</p>
-            <h5  className=" mx-3">
-                I design and develop services for customers specializing creating stylish, 
-                modern websites, web services.
-            </h5>
-                <a href="#" className="border-1 p-2 w-fit mx-auto border-purple-500 ">Blog &rarr;</a>
+        <div className={`${theme.theme === 'light' ? "text-black" : "text-white"} max-w-60 h-84 flex items-center flex-col gap-1 border-gray-300`}>
+            <img src={sample} alt="" className="w-32 h-32 rounded-full object-cover"/>
+            <div className="description  border-1">
+                <p>Mon Oct 06 2025</p>
+                <h5  className=" mx-3">
+                    I design and develop services for customers specializing creating stylish, 
+                    modern websites, web services.
+                </h5>
+                    <a href="#" className="border-1 p-2 w-fit mx-auto border-purple-500 ">Blog &rarr;</a>
+            </div>
         </div>
     )
 }

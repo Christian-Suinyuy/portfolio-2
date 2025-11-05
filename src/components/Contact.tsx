@@ -1,6 +1,9 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../state/store';
 function Contact(){
+        const theme = useSelector((state:RootState)=> state.theme)
       const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent) => {
@@ -28,7 +31,7 @@ function Contact(){
 
     return(
 
-        <section id="contact" className="pb-20 ">
+        <section id="contact" className={`${theme.theme === 'light' ? "text-slate-900" : "text-slate-300"} pb-20 `}>
             <h2 className="text-center font-semibold text-2xl mb-3">Let`s Discuss your Project</h2>
             <p className="text-center p-x-20">hi! i would really appriciate your feedback, you can contact me throght the following services</p>
             <div className="grid sm:grid-cols-2 gap-15 shadow-2xl px-10 md:px-4 py-18">
@@ -58,7 +61,7 @@ function Contact(){
                         
                     </div>
 
-                    <div className="flex gap-4 max-w-dvw absolute bottom-0 sm:static shadow-2xl p-3 justify-center items-center contact-stuff">
+                    <div className={` flex gap-4 max-w-dvw absolute bottom-0 sm:static shadow-2xl p-3 justify-center items-center contact-stuff`}>
                        <a href="https://www.facebook.com/christian.bcs.521749/" target="blank"> 
                         <img src="/fb.svg" className="bg-purple-500 h-10 rounded p-2 w-10" alt="" />
                        </a>
@@ -77,23 +80,23 @@ function Contact(){
                     <p className="pb-3">Email me here, about projects or ideas you think i could improve on</p>
                     <label htmlFor="name">
                         <p>Name*</p>
-                        <input type="text" name='user_name' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
+                        <input type="text" id='name' name='user_name' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
                     </label>
-                    <label htmlFor="name">
+                    <label htmlFor="email">
                         <p>Email*</p>
-                        <input type="email" name='from_email' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
+                        <input type="email" id='email' name='from_email' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
                     </label>
-                    <label htmlFor="name">
+                    <label htmlFor="location">
                         <p>Location (optional)</p>
-                        <input type="text" name='location' className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
+                        <input type="text" id='location' name='location' className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
                     </label>
-                    <label htmlFor="name">
+                    <label htmlFor="subject">
                         <p>Subject</p>
-                        <input type="text" name='subject' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
+                        <input type="text" id='subject' name='subject' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
                     </label>
-                    <label htmlFor="name">
+                    <label htmlFor="message">
                         <p>Messsage*</p>
-                        <input type="text" name='message' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
+                        <input type="text" id='message' name='message' required className="border-b-1 border-gray-300 focus:outline-none focus:border-purple-500 focus:border-b-3 w-full" />
                     </label>
 
                     <button type="submit" className="bg-purple-500 hover:cursor-pointer active:scale-85 transition-all duration-100 ease-in-out rounded p-3 mt-10 flex gap-4">Submit <img src="/send.svg" alt="" /></button>

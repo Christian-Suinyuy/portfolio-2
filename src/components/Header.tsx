@@ -9,9 +9,9 @@ function Header(){
   console.log(theme)
     return(
 
-        <section className={`${theme.theme === "light" ? "bg-white" : "bg-slate-800"} flex sticky z-10 top-0 pt-2 justify-between px-5 sm:px-10 md:px-30 lg:px-60`}>
+        <section className={`${theme.theme === "light" ? "bg-white text-black" : "bg-slate-800 text-white"} flex sticky z-10 top-0 pt-2 justify-between px-5 sm:px-10 md:px-30 lg:px-60`}>
             <div id="me"className="flex gap-1">
-                <span className="rounded-4xl w-8 text-center text-white h-8 bg-purple-500"> B</span>
+                <span className="rounded-4xl w-8 text-center h-8 bg-purple-500"> B</span>
                 Banboye
             </div>
 

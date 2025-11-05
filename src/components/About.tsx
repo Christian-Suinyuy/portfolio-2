@@ -1,9 +1,22 @@
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useEffect, useState } from 'react';
 function About (){
+    const [animationUrl, seturl] = useState('')
+    useEffect(()=>{
+        seturl("https://lottie.host/37384153-f001-4f38-96af-53654cca55c7/lWTSXzt0EL.lottie")
+    })
     return(
-        <section id="about" className="sm:flex gap-15 relative justify-center pb-24 sm:p-5shadow-2xl">
-            <div className="image h-fit bg-purple-300 w-450 lg:w-4/5 rounded">
-                <img src="/saple.png" className="hidden sm:flex" alt="" />
-                <div className="flex gap-4 max-w-dvw absolute bottom-0 sm:static shadow-2xl p-3 justify-center items-center bg-white ">
+        <section id="about" className="grid md:grid-cols-[.7fr_1fr] lg:grid-cols-[.5fr_1fr] gap-15 relative justify-center pb-24 sm:p-5shadow-2xl">
+            <div className="image h-fit max-w-full rounded shadow-2xl">
+                {/* <img src="/saple.png" className="hidden sm:flex" alt="" /> */}
+                <div id="animation1" className='hidden md:flex shadow-2xl mb-1'>
+                            <DotLottieReact
+                            src= {animationUrl}
+                            loop
+                            autoplay
+                            />
+                        </div>
+                <div className="flex gap-4 max-w-dvw absolute bottom-0 md:static shadow-2xl p-3 justify-center items-center bg-white ">
                        <a href="https://www.facebook.com/christian.bcs.521749/" target="blank"> 
                         <img src="/fb.svg" className="bg-purple-500 h-10 rounded p-2 w-10" alt="" />
                        </a>
