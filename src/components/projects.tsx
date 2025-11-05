@@ -12,7 +12,7 @@ function Portfolio(){
         dispatch(fetchProjects())
     }, [dispatch])
 
-    console.log(projects)
+
     return (
         <section id="projects" className="flex flex-col justify-center text-center shadow-2xl p-3 items-center-safe gap-5">
             <p></p>
@@ -21,7 +21,7 @@ function Portfolio(){
                 <p>Explore some of my pieces</p>
             </div >
 
-            <div className="flex flex-wrap gap-10 items-center-safe">
+            <div className="flex flex-wrap gap-5 items-center-safe">
                 {
                     projects?.map((project: ProjectType)=> <Card key={project.id} {...project}/>)
                 }

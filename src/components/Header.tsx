@@ -6,7 +6,6 @@ import { toggleTheme } from '../state/ThemeSlice';
 function Header(){
   const theme = useSelector((state:RootState)=> state.theme)
   const Dispatch = useDispatch<AppDispatch>()
-  console.log(theme)
     return(
 
         <section className={`${theme.theme === "light" ? "bg-white text-black" : "bg-slate-800 text-white"} flex sticky z-10 top-0 pt-2 justify-between px-5 sm:px-10 md:px-30 lg:px-60`}>

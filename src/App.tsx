@@ -18,7 +18,7 @@ function App() {
   return (
     <div className={`${theme.theme === "light" ? "lightTheme" : "darkTheme"}`}>
       <Header />
-    <section className='gap-20 mx-5 md:px-20 lg:mx-50 flex flex-col'>
+    <section className='gap-20 mx-5 md:px-15 lg:mx-50 flex flex-col'>
       <Hero />
       <About />
       <WorkProcess />
